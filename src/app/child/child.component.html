@@ -1,0 +1,22 @@
+<div >  
+    <label>  
+        <!-- <input type="radio" name="gender" value="Male" (click)="setradio('male')" [checked]='true' > -->
+        <input type="radio" name="gender" value="Male" (change)="onItemChange($event.target.value)" [checked]='true'>
+        Male  
+    </label>  
+</div>   
+<div class="radio">  
+    <label>  
+        <!-- <input type="radio" name="gender" value="Female" (click)="setradio('female')" >   -->
+        <input type="radio" name="gender" value="Female" (change)="onItemChange($event.target.value)" > 
+        Female  
+    </label>  
+</div>  
+
+<!-- <div *ngIf="isSelected('false')" >  
+<input type="text"/>Male radio button selected  
+</div>  
+(change)="onItemChange($event.target.value)
+<div *ngIf="isSelected('true')">  
+<input type="text"/> Female radio button selected  
+</div> -->

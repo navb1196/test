@@ -1,0 +1,41 @@
+<div class="container">
+      
+    <h1>Angular 8 Bootstrap Tabs Example - ItSolutionStuff.com</h1>
+      
+    <ngb-tabset [destroyOnHide]="false">
+      
+      <ngb-tab title={{tab1}}>
+       
+            <ng-template ngbTabContent>
+                <!-- <h1>{{tab1}}</h1>  -->
+                <!-- <p> this is testing</p> -->
+                <ng-content  select=".myPanelBody">
+          
+                </ng-content>
+        </ng-template>
+      </ngb-tab>
+       
+      <ngb-tab title={{tab2}}>
+        <!-- <ng-template ngbTabTitle>SMS Setting</ng-template> -->
+        <ng-template ngbTabContent>
+             <ng-content select=".myPanelFooter">
+                    
+                </ng-content>
+        </ng-template>
+      </ngb-tab>
+       
+      <ngb-tab>
+        <ng-template ngbTabTitle>Email Setting</ng-template>
+        <ng-template ngbTabContent>
+            <p>This is Email Setting</p>
+        </ng-template>
+      </ngb-tab>
+       
+      <ngb-tab title="Disabled" [disabled]="true">
+        <ng-template ngbTabContent>
+          <p>This is Disabled</p>
+        </ng-template>
+      </ngb-tab>
+       
+    </ngb-tabset>
+    </div>

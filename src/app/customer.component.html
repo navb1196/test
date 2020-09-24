@@ -1,0 +1,28 @@
+<div>
+CustomerName:&nbsp;&nbsp;<input [(ngModel)]='custobj.customerName' type="text" id="txt1">
+<br>
+CustomerCode:&nbsp;&nbsp;<input type="text" [(ngModel)]='custobj.customerCode' id="txt2">
+<br>
+CustomerAmount:&nbsp;&nbsp;<input type="text" [(ngModel)]='custobj.customerAmount' id="txt3">
+<br>
+<button (click)="Add()">Add</button>
+<br>
+ <!-- <table>
+     <tr>
+         <td>Customer Name</td>
+         <td>Customer code</td>
+         <td>Customer Amount</td>
+     </tr>
+     <tr *ngFor='let cust of customers'>
+     <td>{{cust.customerName}}</td>
+     <td>{{cust.customerCode}}</td>
+     <td>{{cust.customerAmount}}</td>
+     <td> <a href="#" (click)=Select(cust)>Select</a> </td>
+     <td><button (click)="Delete(cust)">Delete</button> </td>
+    </tr>
+ </table> -->
+ <app-gridcompon [EntityName]="custEntity" [gridDataGet]="customers" (Selected)="Select($event)"></app-gridcompon>
+</div>
+<!-- {{custobj.customerName}}
+{{custobj.customerCode}}
+{{custobj.customerAmount}} -->
